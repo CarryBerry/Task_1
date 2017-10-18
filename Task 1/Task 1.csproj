@@ -45,9 +45,12 @@
   <ItemGroup>
     <Compile Include="Classes\AmeriCandy.cs" />
     <Compile Include="Classes\Candy.cs" />
+    <Compile Include="Classes\Chocolate.cs" />
     <Compile Include="Classes\ChocolateType.cs" />
+    <Compile Include="Classes\MilkaChocolate.cs" />
     <Compile Include="Classes\RaffaelloCandy.cs" />
     <Compile Include="Classes\Sweet.cs" />
+    <Compile Include="Classes\TobleroneChocolate.cs" />
     <Compile Include="Interfaces\ICandy.cs" />
     <Compile Include="Interfaces\IChocolate.cs" />
     <Compile Include="Interfaces\INameable.cs" />
