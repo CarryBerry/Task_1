@@ -8,6 +8,6 @@ namespace Task_1.Interfaces
 {
     interface ICandy : ISweet
     {
-
+        string CandyFilling { get; }
     }
 }

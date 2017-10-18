@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Task_1.Classes
 {
-    public enum Shape
+    enum ChocolateType
     {
-        Rectangle, Square, Oval, Circle 
+        White, Milk, Dark
     }
 }

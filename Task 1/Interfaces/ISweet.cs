@@ -12,6 +12,6 @@ namespace Task_1.Interfaces
         double Weight { get; }
         double SugarContent { get; }
 
-        Shape Shape { get; }
+        string Shape { get; }
     }
 }
