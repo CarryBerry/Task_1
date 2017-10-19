@@ -86,6 +86,17 @@ namespace Task_1.Classes
             }
         }
 
+        public void SortBySugarContent()
+        {
+            var search = from item in Sweets
+                         orderby item.SugarContent
+                         select item;
+            foreach (var i in search)
+            {
+                (i.Name + "\t" + i.SugarContent).ToString();
+            }
+        }
+
         public void ShowAll()
         {
             foreach (var i in Sweets)
