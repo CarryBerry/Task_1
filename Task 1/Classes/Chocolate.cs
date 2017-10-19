@@ -9,13 +9,8 @@ namespace Task_1.Classes
 {
     class Chocolate : Sweet, IChocolate
     {
-        public Chocolate(string name, string shape, double sugar, double weight, ChocolateType chocolateType)
+        public Chocolate()
         {
-            Name = name;
-            Shape = shape;
-            SugarContent = sugar;
-            Weight = weight;
-            ChocolateType = chocolateType;
         }
 
         public ChocolateType ChocolateType

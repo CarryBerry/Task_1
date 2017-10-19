@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task_1.Classes
 {
-    enum ChocolateType
+    public enum ChocolateType
     {
         White, Milk, Dark
     }

@@ -8,14 +8,13 @@ namespace Task_1.Classes
 {
     class TobleroneChocolate : Chocolate
     {
-        public TobleroneChocolate(string name, string shape, double sugar, double weight, ChocolateType chocolateType) 
-            : base(name, shape, sugar, weight, chocolateType)
+        public TobleroneChocolate()
         {
-            name = "Toblerone";
-            shape = "triangle";
-            weight = 100;
-            sugar = 15;
-            chocolateType = ChocolateType.Dark;
+            Name = "Toblerone";
+            Shape = "triangle";
+            Weight = 100;
+            SugarContent = 15;
+            ChocolateType = ChocolateType.Dark;
         }
     }
 }

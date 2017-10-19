@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Task_1.Interfaces
 {
-    public interface ICandy : ISweet
+    public interface IGift
     {
-        string CandyFilling { get; }
+        ICollection<ISweet> Sweets { get; }
+        double TotalWeight { get; }
     }
 }

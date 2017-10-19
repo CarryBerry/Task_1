@@ -7,7 +7,7 @@ using Task_1.Classes;
 
 namespace Task_1.Interfaces
 {
-    interface ISweet : INameable
+    public interface ISweet : INameable
     {
         double Weight { get; }
         double SugarContent { get; }

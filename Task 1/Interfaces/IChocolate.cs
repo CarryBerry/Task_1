@@ -7,7 +7,7 @@ using Task_1.Classes;
 
 namespace Task_1.Interfaces
 {
-    interface IChocolate : ISweet
+    public interface IChocolate : ISweet
     {
         ChocolateType ChocolateType { get; }
     }

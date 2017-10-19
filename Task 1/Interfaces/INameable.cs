@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task_1.Interfaces
 {
-    interface INameable
+    public interface INameable
     {
         string Name { get; }
     }

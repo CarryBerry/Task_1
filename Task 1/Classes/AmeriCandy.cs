@@ -8,14 +8,13 @@ namespace Task_1.Classes
 {
     class AmeriCandy : Candy
     {
-        public AmeriCandy(string name, string shape, double sugar, double weight, string filling) 
-            : base(name, shape, sugar, weight, filling)
+        public AmeriCandy()
         {
-            name = "Ameri";
-            shape = "star";
-            weight = 15;
-            sugar = 4;
-            filling = "praline";
+            Name = "Ameri";
+            Shape = "star";
+            Weight = 15;
+            SugarContent = 4;
+            CandyFilling = "praline";
         }
     }
 }
