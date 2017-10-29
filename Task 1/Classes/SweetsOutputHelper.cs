@@ -9,7 +9,7 @@ namespace Task_1.Classes
 {
     public static class SweetsOutputHelper
     {
-        public static void SweetsOutput (ICollection<ISweet> sweets)
+        public static void SweetsOutput (IEnumerable<ISweet> sweets)
         {
             foreach (var sweet in sweets)
             {

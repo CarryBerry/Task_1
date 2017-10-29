@@ -56,37 +56,37 @@ namespace Task_1.Classes
             return Sweets.Remove(item);
         }
 
-        public ICollection<ISweet> SortByWeight()
+        public IEnumerable<ISweet> SortByWeight()
         {
-            var sortByWeight = Sweets.OrderBy(x => x.Weight).ToList();
+            var sortByWeight = Sweets.OrderBy(x => x.Weight).ToArray();
             return sortByWeight;
         }
 
-        public ICollection<ISweet> SortByShape()
+        public IEnumerable<ISweet> SortByShape()
         {
-            var sortByShape = Sweets.OrderBy(x => x.Shape).ToList();
+            var sortByShape = Sweets.OrderBy(x => x.Shape).ToArray();
             return sortByShape;
         }
 
-        public ICollection<ISweet> SortByName()
+        public IEnumerable<ISweet> SortByName()
         {
-            var sortByName = Sweets.OrderBy(x => x.Name).ToList();
+            var sortByName = Sweets.OrderBy(x => x.Name).ToArray();
             return sortByName;
         }
 
-        public ICollection<ISweet> SortBySugarContent()
+        public IEnumerable<ISweet> SortBySugarContent()
         {
-            var sortBySugarContent = Sweets.OrderBy(x => x.SugarContent).ToList();
+            var sortBySugarContent = Sweets.OrderBy(x => x.SugarContent).ToArray();
             return sortBySugarContent;
         }
 
-        public ICollection<ISweet> SearchBySugarContent(double lower, double upper)
+        public IEnumerable<ISweet> SearchBySugarContent(double lower, double upper)
         {
             var sweetsBySugarContent = Sweets
                 .Where(x => x is ISweet)
                 .Where(x => x.SugarContent >= lower)
                 .Where(x => x.SugarContent <= upper)
-                .ToList();
+                .ToArray();
             return sweetsBySugarContent;
         }
 
