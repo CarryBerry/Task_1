@@ -13,32 +13,27 @@ namespace Task_1
         static void Main(string[] args)
         {
             Gift gift1 = new Gift("Christmass gift", new List<ISweet>());
+            GiftBuilder gb = new GiftBuilder(gift1);
+            gb.Build();
 
-            var candy1 = new RaffaelloCandy();
-            var candy2 = new RaffaelloCandy();
-            var candy3 = new AmeriCandy();
-            var candy4 = new RaffaelloCandy();
-            var chocolate1 = new TobleroneChocolate();
-            
-            gift1.SweetAdd(candy1);
-            gift1.SweetAdd(candy2);
-            gift1.SweetAdd(candy3);
-            gift1.SweetAdd(candy4);
-            gift1.SweetAdd(chocolate1);
-
-            SweetsOutputHelper.SweetsOutput(gift1.SortByWeight());
+            Console.WriteLine("Sweets sorted by name: \n");
+            SweetsOutputHelper.SweetsOutput(gift1.SortByName());
 
             Console.WriteLine();
 
+            Console.WriteLine("Sweets sorted by sugar content: \n");
             SweetsOutputHelper.SweetsOutput(gift1.SortBySugarContent());
 
             Console.WriteLine();
 
-            SweetsOutputHelper.SweetsOutput(gift1.SearchBySugarContent(1, 4));
+            double lowerSugarContent = 1.2;
+            double upperSugarContent = 4;
+            Console.WriteLine("Sweets with sugar content from {0} to {1}: \n", lowerSugarContent, upperSugarContent);
+            SweetsOutputHelper.SweetsOutput(gift1.SearchBySugarContent(lowerSugarContent, upperSugarContent));
 
             Console.WriteLine();
 
-            Console.WriteLine(gift1.TotalWeight);
+            Console.WriteLine("Total weight of the {0} is: {1}", gift1.Name, gift1.TotalWeight);
             
             Console.ReadKey();
         }

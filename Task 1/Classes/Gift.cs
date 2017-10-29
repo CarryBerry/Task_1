@@ -70,25 +70,18 @@ namespace Task_1.Classes
 
         public ICollection<ISweet> SortBySugarContent()
         {
-            var sort = Sweets.OrderBy(x => x.SugarContent).ToList();
-            return sort;
+            var sortBySugarContent = Sweets.OrderBy(x => x.SugarContent).ToList();
+            return sortBySugarContent;
         }
 
         public ICollection<ISweet> SearchBySugarContent(double lower, double upper)
         {
             var sweetsBySugarContent = Sweets
                 .Where(x => x is ISweet)
-                .Where(x => ((ISweet)x).SugarContent >= lower)
-                .Where(x => ((ISweet)x).SugarContent <= upper)
+                .Where(x => x.SugarContent >= lower)
+                .Where(x => x.SugarContent <= upper)
                 .ToList();
             return sweetsBySugarContent;
-
-
-                //= from item in Sweets
-                //         orderby item.SugarContent
-                //         where item.SugarContent >=lower
-                //         where item.SugarContent <=upper
-                //         select item;
         }
 
         public double TotalWeight
