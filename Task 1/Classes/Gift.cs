@@ -62,6 +62,12 @@ namespace Task_1.Classes
             return sortByWeight;
         }
 
+        public ICollection<ISweet> SortByShape()
+        {
+            var sortByShape = Sweets.OrderBy(x => x.Shape).ToList();
+            return sortByShape;
+        }
+
         public ICollection<ISweet> SortByName()
         {
             var sortByName = Sweets.OrderBy(x => x.Name).ToList();

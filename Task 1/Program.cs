@@ -19,12 +19,8 @@ namespace Task_1
             Console.WriteLine("Sweets sorted by name: \n");
             SweetsOutputHelper.SweetsOutput(gift1.SortByName());
 
-            //Console.WriteLine();
-
             Console.WriteLine("\nSweets sorted by sugar content: \n");
             SweetsOutputHelper.SweetsOutput(gift1.SortBySugarContent());
-
-            //Console.WriteLine();
 
             double lowerSugarContent = 1.2;
             double upperSugarContent = 10;
