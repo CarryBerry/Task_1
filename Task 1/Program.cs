@@ -18,17 +18,25 @@ namespace Task_1
             var candy2 = new RaffaelloCandy();
             var candy3 = new AmeriCandy();
             var candy4 = new RaffaelloCandy();
+            var chocolate1 = new TobleroneChocolate();
             
             gift1.SweetAdd(candy1);
             gift1.SweetAdd(candy2);
             gift1.SweetAdd(candy3);
             gift1.SweetAdd(candy4);
+            gift1.SweetAdd(chocolate1);
 
-            gift1.ShowAll();
+            SweetsOutputHelper.SweetsOutput(gift1.SortByWeight());
 
-            gift1.SortByWeight();
+            Console.WriteLine();
 
-            gift1.SearchBySugarContent(1, 4);
+            SweetsOutputHelper.SweetsOutput(gift1.SortBySugarContent());
+
+            Console.WriteLine();
+
+            SweetsOutputHelper.SweetsOutput(gift1.SearchBySugarContent(1, 4));
+
+            Console.WriteLine();
 
             Console.WriteLine(gift1.TotalWeight);
             

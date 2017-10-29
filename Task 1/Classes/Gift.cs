@@ -56,36 +56,39 @@ namespace Task_1.Classes
             return Sweets.Remove(item);
         }
 
-        public void SortByWeight()
+        public ICollection<ISweet> SortByWeight()
         {
-            var sort = Sweets.OrderBy(x => x.Weight);
+            var sortByWeight = Sweets.OrderBy(x => x.Weight).ToList();
+            return sortByWeight;
         }
 
-        public void SortByName()
+        public ICollection<ISweet> SortByName()
         {
-            var sort = Sweets.OrderBy(x => x.Name);
+            var sortByName = Sweets.OrderBy(x => x.Name).ToList();
+            return sortByName;
         }
 
-        public void SortBySugarContent()
+        public ICollection<ISweet> SortBySugarContent()
         {
-            var sort = Sweets.OrderBy(x => x.SugarContent);
+            var sort = Sweets.OrderBy(x => x.SugarContent).ToList();
+            return sort;
         }
 
-        public void ShowAll()
+        public ICollection<ISweet> SearchBySugarContent(double lower, double upper)
         {
-            foreach (var i in Sweets)
-            {
-                i.ToString();
-            }
-        }
+            var sweetsBySugarContent = Sweets
+                .Where(x => x is ISweet)
+                .Where(x => ((ISweet)x).SugarContent >= lower)
+                .Where(x => ((ISweet)x).SugarContent <= upper)
+                .ToList();
+            return sweetsBySugarContent;
 
-        public void SearchBySugarContent(double lower, double upper)
-        {
-            var search = from item in Sweets
-                         orderby item.SugarContent
-                         where item.SugarContent >=lower
-                         where item.SugarContent <=upper
-                         select item;
+
+                //= from item in Sweets
+                //         orderby item.SugarContent
+                //         where item.SugarContent >=lower
+                //         where item.SugarContent <=upper
+                //         select item;
         }
 
         public double TotalWeight

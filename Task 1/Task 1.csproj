@@ -51,6 +51,7 @@
     <Compile Include="Classes\MilkaChocolate.cs" />
     <Compile Include="Classes\RaffaelloCandy.cs" />
     <Compile Include="Classes\Sweet.cs" />
+    <Compile Include="Classes\SweetsOutputHelper.cs" />
     <Compile Include="Classes\TobleroneChocolate.cs" />
     <Compile Include="Interfaces\ICandy.cs" />
     <Compile Include="Interfaces\IChocolate.cs" />
