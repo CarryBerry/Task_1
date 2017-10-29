@@ -67,8 +67,15 @@
       <FileName>Classes\GiftBuilder.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Task_1.Classes.SweetsOutputHelper" Collapsed="true">
+    <Position X="9.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\SweetsOutputHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Enum Name="Task_1.Classes.ChocolateType" Collapsed="true">
-    <Position X="9.75" Y="1.75" Width="1.5" />
+    <Position X="9.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAAIA=</HashCode>
       <FileName>Classes\ChocolateType.cs</FileName>

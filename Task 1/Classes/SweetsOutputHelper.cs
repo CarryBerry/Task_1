@@ -13,7 +13,7 @@ namespace Task_1.Classes
         {
             foreach (var sweet in sweets)
             {
-                Console.WriteLine(sweet.ToString());
+                Console.WriteLine(sweet.Name.ToString());
             }
         }
     }

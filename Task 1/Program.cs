@@ -13,27 +13,25 @@ namespace Task_1
         static void Main(string[] args)
         {
             Gift gift1 = new Gift("Christmass gift", new List<ISweet>());
-            GiftBuilder gb = new GiftBuilder(gift1);
-            gb.Build();
+            GiftBuilder giftbuilder = new GiftBuilder(gift1);
+            giftbuilder.Build();
 
             Console.WriteLine("Sweets sorted by name: \n");
             SweetsOutputHelper.SweetsOutput(gift1.SortByName());
 
-            Console.WriteLine();
+            //Console.WriteLine();
 
-            Console.WriteLine("Sweets sorted by sugar content: \n");
+            Console.WriteLine("\nSweets sorted by sugar content: \n");
             SweetsOutputHelper.SweetsOutput(gift1.SortBySugarContent());
 
-            Console.WriteLine();
+            //Console.WriteLine();
 
             double lowerSugarContent = 1.2;
-            double upperSugarContent = 4;
-            Console.WriteLine("Sweets with sugar content from {0} to {1}: \n", lowerSugarContent, upperSugarContent);
+            double upperSugarContent = 10;
+            Console.WriteLine("\nSweets with sugar content from {0} to {1}: \n", lowerSugarContent, upperSugarContent);
             SweetsOutputHelper.SweetsOutput(gift1.SearchBySugarContent(lowerSugarContent, upperSugarContent));
 
-            Console.WriteLine();
-
-            Console.WriteLine("Total weight of the {0} is: {1}", gift1.Name, gift1.TotalWeight);
+            Console.WriteLine("\nTotal weight of the {0} is: {1}", gift1.Name, gift1.TotalWeight);
             
             Console.ReadKey();
         }
