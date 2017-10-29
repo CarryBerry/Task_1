@@ -28,80 +28,54 @@ namespace Task_1.Classes
             Sweets = sweets;
         }
 
-        public int Count
+        public int SweetCount
         {
             get
             {
                 return Sweets.Count;
             }
         }
-
-        double IGift.TotalWeight
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public void Add(ISweet item)
+        
+        public void SweetAdd(ISweet item)
         {
             Sweets.Add(item);
         }
 
-        public void Clear()
+        public void SweetClear()
         {
             Sweets.Clear();
         }
 
-        public bool Contains(ISweet item)
+        public bool SweetContains(ISweet item)
         {
             return Sweets.Contains(item);
         }
 
-        public bool Remove(ISweet item)
+        public bool SweetRemove(ISweet item)
         {
             return Sweets.Remove(item);
         }
 
         public void SortByWeight()
         {
-            var search = from item in Sweets
-                         orderby item.Weight
-                         select item;
-            foreach (var i in search)
-            {
-                Console.WriteLine((i.Name+"\t"+i.Weight).ToString());
-            }
+            var sort = Sweets.OrderBy(x => x.Weight);
         }
 
         public void SortByName()
         {
-            var search = from item in Sweets
-                         orderby item.Name
-                         select item;
-            foreach (var i in search)
-            {
-                i.Name.ToString();
-            }
+            var sort = Sweets.OrderBy(x => x.Name);
         }
 
         public void SortBySugarContent()
         {
-            var search = from item in Sweets
-                         orderby item.SugarContent
-                         select item;
-            foreach (var i in search)
-            {
-                (i.Name + "\t" + i.SugarContent).ToString();
-            }
+            var sort = Sweets.OrderBy(x => x.SugarContent);
         }
 
         public void ShowAll()
         {
             foreach (var i in Sweets)
             {
-                Console.WriteLine(i.ToString());
+                i.ToString();
             }
         }
 
@@ -112,22 +86,15 @@ namespace Task_1.Classes
                          where item.SugarContent >=lower
                          where item.SugarContent <=upper
                          select item;
-            foreach (var i in search)
-            {
-                Console.WriteLine((i.Name + "\t" + i.SugarContent).ToString());
-            }
         }
 
-        public double TotalWeight()
+        public double TotalWeight
         {
-            double totalWeight = 0;
-            var search = from item in Sweets
-                         select item;
-            foreach (var i in search)
+            get
             {
-                totalWeight += i.Weight;
+                var totalWeight = Sweets.Sum(x => x.Weight);
+                return totalWeight;
             }
-            return totalWeight;
         }
     }
 }

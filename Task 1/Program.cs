@@ -19,10 +19,10 @@ namespace Task_1
             var candy3 = new AmeriCandy();
             var candy4 = new RaffaelloCandy();
             
-            gift1.Add(candy1);
-            gift1.Add(candy2);
-            gift1.Add(candy3);
-            gift1.Add(candy4);
+            gift1.SweetAdd(candy1);
+            gift1.SweetAdd(candy2);
+            gift1.SweetAdd(candy3);
+            gift1.SweetAdd(candy4);
 
             gift1.ShowAll();
 
@@ -30,7 +30,7 @@ namespace Task_1
 
             gift1.SearchBySugarContent(1, 4);
 
-            Console.WriteLine(gift1.TotalWeight());
+            Console.WriteLine(gift1.TotalWeight);
             
             Console.ReadKey();
         }
